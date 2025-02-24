@@ -627,9 +627,9 @@ html, body{
 .careers-side h3{
   padding: 5% 0;
   font-family: 'ostBlack';
-  color: gray;
-  mix-blend-mode: difference;
+  color: #DCDCDC;
   max-width: 320px;
+  margin-bottom: 1%;
 }
 
 .careers-side button{
@@ -905,6 +905,11 @@ h2 {
 
   .project-section{
     margin: 2% 2em;
+  }
+  .careers-side h3{
+    padding: 10px; /* Add some inner spacing */
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
   }
 }
 
