@@ -1,158 +1,134 @@
 @font-face {
     font-family: ostBlack;
     src: url('./ostrich-sans-black.ttf') format('truetype');
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: ostLight;
     src: url('./ostrich-sans-rounded.ttf') format('truetype');
-  }
+}
 
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-footer{
+footer {
     background-color: #1F1F1F;
     color: white;
     padding: 4%;
 }
 
-footer .footer-container{
+.footer-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-start; /* Aligns all content to the top */
     gap: 20px;
-    padding: 0px 5%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: left;
 }
 
-.footer-container > div{
-    width: 100%;
-    max-width: 300px;
+.left-container,
+.middle-container,
+.right-container {
+    flex: 1;
+    min-width: 280px;
+    max-width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Center left container for logo */
+.left-container {
+    align-items: center;
+}
+
+.left-image img {
+    width: 80px;
     height: auto;
-    padding: 20px;
+    object-fit: cover;
 }
 
-.left-container{
-    text-align: center;
+.middle-container h1,
+.right-container h1 {
+    color: gray;
+    font-family: 'ostLight';
+    letter-spacing: 3px;
+    font-size: clamp(1.5em, 2vw, 2em);
+    margin-bottom: 10px;
 }
 
-.footer-container > div:nth-child(2) h1{
-   padding: 20px 0%;
-   color: gray;
-   font-family: 'ostInline';
-   letter-spacing: 3px;
-   font-size: 2em;
-   font-size: clamp(1.5em, 2vw, 2em);
-   text-align: center;
+.middle-container h1 {
+    margin-bottom: 15px;
+}
+
+.left-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .phone,
 .email,
-.location{
-    padding: 1% 0%;
+.location {
     color: gray;
-    text-align: center;
 }
 
-.left-info span{
+.left-info span {
     font-family: 'ostLight';
     letter-spacing: 3.5px;
     color: white;
 }
 
-.left-info h4{
-    font-family: 'ostLight';
-    letter-spacing: 3.5px;
-    text-align: center;
-}
-
-.footer-container > div:last-child h1{
-    padding: 20px 0%;
-    color: gray;
-    font-family: 'ostInline';
-    letter-spacing: 3px;
-    font-size: 2em;
-    font-size: clamp(1.5em, 2vw, 2em);
-    text-align: center;
- }
- 
-.line-footer{
+.line-footer {
     background: gray;
     height: 2px;
     margin-bottom: 20px;
     width: 100%;
 }
 
-.right-info{
+.right-info {
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    justify-content: flex-start;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 10px;
 }
 
-.icons-footer{
-    max-width: 30px;
-    min-width: 20px;
+.icons-footer {
+    width: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.icons-footer img{
+.icons-footer img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-.left-image{
-    max-width: 80px;
-    min-width: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-}
-
-.left-image img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-@media (min-width: 768px) {
-    .footer-container > div {
-        width: 33%;
-    }
-
+/* Responsive Design */
+@media (max-width: 768px) {
     .footer-container {
-        gap: 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
-    .left-container {
-        text-align: left;
-    }
-
-    .phone,
-    .email,
-    .location {
-        text-align: left;
-    }
-
-    .left-info h4 {
-        text-align: left;
-    }
-
-    .footer-container > div:nth-child(2) h1,
-    .footer-container > div:last-child h1 {
-        text-align: left;
+    .left-container,
+    .middle-container,
+    .right-container {
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
     }
 
     .right-info {
-        justify-content: flex-start;
+        justify-content: center;
     }
-
-    
 }
