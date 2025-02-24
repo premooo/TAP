@@ -1,0 +1,332 @@
+@font-face {
+    font-family: neue;
+    src: url('./TheNeue-Black.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: ostBlack;
+  src: url('./ostrich-sans-black.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: ostLight;
+  src: url('./ostrich-sans-rounded.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: ostHeavy;
+  src: url('./OstrichSans-Heavy.otf') format('Opentype');
+}
+
+@font-face {
+  font-family: ostInline;
+  src: url('./OstrichSansInline-Regular.otf') format('Opentype');
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: auto;
+}
+
+.register-container,
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5vw 0;
+    padding: 2em;
+    text-align: left;
+    gap: 5px;
+  }
+
+.register-container form,
+.login-container form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5px;
+    width: min(90%, 300px);
+}
+
+.register-container input[type="text"],
+.register-container input[type="password"],
+.login-container input[type="text"],
+.login-container input[type="password"]{
+    padding: 0.8em;
+    border-radius: 4px;
+    border: 0.5px solid;
+}
+
+.register-container label,
+.login-container label{
+    font-family: 'ostBlack';
+    letter-spacing: 3px;
+    font-size: clamp(1rem, calc(1vw + 0.5rem), 2rem);
+}
+
+.register-container input[type="submit"],
+.login-container input[type="submit"]{
+    padding: 10px;
+    border-radius: 8px;
+    border: 0.5px solid black;
+    color: white;
+    background-color: black;
+}
+
+
+.login-container p, a{
+    font-family: 'ostLight';
+    letter-spacing: 2px;
+}
+
+.logo-register,
+.logo-login{
+    width: 100%;
+    max-width:100px;
+    min-width: 80px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+.logo-register img,
+.logo-login img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.project-form-container{
+  margin: 2% 15%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #F5F5F5;
+  border-radius: 8px;
+}
+
+.project-form-container form{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.project-form-container form label{
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-size: clamp(0.5rem, calc(1.2rem + 1vw), 1.2rem);
+}
+
+.project-form-container form input{
+  padding: 8px;
+}
+
+.project-form-container form button{
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  border: none;
+
+}
+
+.project-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.message {
+  text-align: center;
+  color: green;
+  margin-bottom: 20px;
+}
+
+.project-container {
+  display: flex;
+  gap: 20px;
+}
+
+.project-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.message {
+  text-align: center;
+  color: green;
+  margin-bottom: 20px;
+}
+
+.project-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Enables stacking on smaller screens */
+}
+
+.upload-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  min-height: 200px;
+  max-width: 100%; /* Prevents overflow */
+}
+
+.upload-section:hover {
+  border-color: #007bff;
+}
+
+.drop-area {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+}
+
+.preview-image {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.form-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f9f9f9;
+  min-width: 300px; /* Ensures form stays legible */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: none;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background: black;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+/* Dashboard */
+.dashboard-container{
+  margin: 2% 15%;
+  min-height: 50vh;
+}
+
+.stats-container{
+  display: flex;
+  padding: 15px;
+  gap: 20px;
+  overflow: hidden;
+  overflow: auto;
+}
+
+.stat-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  min-width: 200px;
+  min-height:200px;
+  border: gray solid 0.5px;
+  border-radius: 8px;
+}
+
+.stat-item p{
+  display: flex;
+  justify-content: right;
+  font-size: clamp(1.5rem, calc(1vw + 2rem), 2rem);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .project-container {
+    flex-direction: column; /* Stack items vertically */
+    gap: 30px; /* Add spacing between sections */
+  }
+
+  .dashboard-container{
+    margin: 10% 2em;
+  }
+
+  .upload-section {
+    order: 1; /* Keeps upload area on top for small screens */
+  }
+
+  .form-section {
+    order: 2; /* Moves form below the upload section */
+    min-width: auto; /* Allows form width to adapt */
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 20px;
+  }
+
+  .drop-area {
+    font-size: 14px; /* Smaller text for mobile */
+  }
+
+  .submit-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
