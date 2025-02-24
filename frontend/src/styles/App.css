@@ -35,13 +35,15 @@ html, body{
   overflow-x: hidden;
 }
 
-.main-section{
+.main-section {
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
   background: linear-gradient(127deg, #1F1F1F 50%, #fff 50%);
   min-height: calc(100vh - 80.64px);
-  gap: 15px;
+  gap: 20px;
+  padding: 0.5% clamp(5%, 13%, 13%);
 }
 
 .main-section > div{
@@ -908,7 +910,7 @@ h2 {
 
 @media only screen and (min-width: 768px) and (max-width: 1280px) {
   .main-section{
-  padding: 0% 2em;
+  padding: 0% 6vw;
   }
   
   .hero-container{
