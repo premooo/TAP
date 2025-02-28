@@ -24,7 +24,13 @@ export class Header extends Component {
     return (
       <div className="header-container">
         <div className="header-Img">
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? 'active' : '')}
+            onClick={this.toggleMenu} 
+          >
           <img src={LogoW} alt="TAP LOGO" />
+          </NavLink>
         </div>
         <button
           className="hamburger-menu"
