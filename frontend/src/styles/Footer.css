@@ -21,10 +21,8 @@ footer {
 }
 
 .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start; /* Aligns all content to the top */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Always three equal columns */
     gap: 20px;
     max-width: 1200px;
     margin: auto;
@@ -113,10 +111,29 @@ footer {
 }
 
 /* Responsive Design */
+@media (min-width: 769px) {
+    .footer-container {
+        flex-direction: row; /* Ensures they stay in a row */
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .left-container,
+    .middle-container,
+    .right-container {
+        max-width: 33%;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .right-info {
+        justify-content: flex-start;
+    }
+}
+
 @media (max-width: 768px) {
     .footer-container {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr; /* Forces a single column */
         text-align: center;
     }
 
